@@ -1,0 +1,44 @@
+.tip-wrapper {
+  width: 700px;
+  margin: 0 auto;
+
+  background-color: aliceblue;
+  padding: 70px 100px;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: auto;
+  gap: 1px 1px;
+  justify-content: center;
+}
+button {
+  background-color: var(--very-dark-cyan);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  width: 90px;
+}
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+input {
+  width: 92px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-top: 3px;
+  margin-right: 4px;
+  outline: none;
+}
+div.input-wrapper {
+  position: relative;
+}
+::placeholder {
+  color: red;
+  font-size: 17.5px;
+}

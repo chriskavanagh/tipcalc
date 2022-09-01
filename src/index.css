@@ -18,10 +18,15 @@
     url("../fonts/space-mono-v11-latin-regular.woff") format("woff");
 }
 
-body {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: "Roboto", "Space Mono", monospace;
   font-size: 1.5rem;
   background-color: var(--light-grayish-cyan);
