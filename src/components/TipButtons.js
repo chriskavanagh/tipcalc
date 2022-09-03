@@ -2,31 +2,31 @@ import React, { useState } from "react";
 import "../styles/TipButtons.css";
 //import { FaDollarSign } from "react-icons/fa";
 
-export default function TipButtons({
-  tip,
-  setTip,
-  formattedAmt,
-  setFormattedAmt,
-  handler,
-}) {
-  const [isEditing, setIsediting] = useState(false);
+export default function TipButtons({ tip, setTip, handler }) {
+  function customHandler(event) {
+    let value = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 2,
+    }).format(event.target.value.replace(/\D+/g, ""));
+    setTip(value === "0" ? "" : value);
+  }
 
-  // button handler
-
-  const toCurrency = (num) => {
+  /* const toCurrency = (num) => {
+    let num1 = Number(num);
     const formatter = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
     });
 
-    return formatter.format(num);
-  };
+    return formatter.format(num1);
+  }; */
 
-  const toggleEditing = () => {
+  /* const toggleEditing = () => {
     setIsediting((prev) => !prev);
-  };
+  }; */
 
-  console.log(isEditing);
+  //console.log(isEditing);
   console.log(tip);
 
   return (
@@ -48,31 +48,15 @@ export default function TipButtons({
         <button value={0.5} onClick={handler}>
           50%
         </button>
-
-        {isEditing ? (
-          <div className="input-wrapper">
-            <input
-              type="number"
-              // placeholder="0.00"
-              className="custom"
-              value={tip}
-              onChange={handler}
-              onBlur={toggleEditing}
-            />
-          </div>
-        ) : (
-          <div className="input-wrapper">
-            <input
-              type="text"
-              // placeholder="0.00"
-              className="custom"
-              value={toCurrency(tip)}
-              onChange={handler}
-              onFocus={toggleEditing}
-              readOnly
-            />
-          </div>
-        )}
+        <div className="input-wrapper">
+          <input
+            type="text"
+            // placeholder="0.00"
+            className="custom"
+            value={tip}
+            onChange={customHandler}
+          />
+        </div>
       </div>
     </div>
   );
