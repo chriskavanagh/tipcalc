@@ -1,34 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { currencyMask } from "../utils/currencyMask";
 import "../styles/TipButtons.css";
 //import { FaDollarSign } from "react-icons/fa";
 
-export default function TipButtons({ tip, setTip, handler }) {
-  function customHandler(event) {
-    let value = new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 2,
-    }).format(event.target.value.replace(/\D+/g, ""));
-    setTip(value === "0" ? "" : value);
-  }
-
-  /* const toCurrency = (num) => {
-    let num1 = Number(num);
-    const formatter = new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-    });
-
-    return formatter.format(num1);
-  }; */
-
-  /* const toggleEditing = () => {
-    setIsediting((prev) => !prev);
-  }; */
-
-  //console.log(isEditing);
-  console.log(tip);
-
+export default function TipButtons({ tip, handler }) {
   return (
     <div className="tip-wrapper">
       <p>Select Tip %</p>
@@ -53,8 +28,8 @@ export default function TipButtons({ tip, setTip, handler }) {
             type="text"
             // placeholder="0.00"
             className="custom"
-            value={tip}
-            onChange={customHandler}
+            value={"$" + tip}
+            onChange={(e) => handler(currencyMask(e))}
           />
         </div>
       </div>
