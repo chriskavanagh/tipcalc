@@ -1,22 +1,17 @@
+import "../styles/Display.css";
+
 export default function Display() {
   return (
-    <div>
-      <div className="display-row">
-        <div className="display-label">
-          <p className="header">Tip Amount</p>
-          <p className="unit">/ person</p>
-        </div>
-        <div className="display-amt">
-          <p className="value">$0.00</p>
-        </div>
-        <div className="display-label">
-          <p className="header">Tip Amount</p>
-          <p className="unit">/ person</p>
-        </div>
-        <div className="display-amt">
-          <p className="value">$0.00</p>
-        </div>
-        <button className="btn">Reset</button>
+    <div className="wrapper">
+      <div className="tip-container">
+        <h6 className="tip-amt">Tip Amount</h6>
+        <p id="person">/person</p>
+        <h6 className="total-text">Total</h6>
+        <p className="tip-person">/person</p>
+      </div>
+      <div className="total-container">
+        <h2>$0.00</h2>
+        <h2 className="total">$0.00</h2>
       </div>
     </div>
   );

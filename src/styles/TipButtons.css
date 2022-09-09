@@ -1,9 +1,8 @@
 .tip-wrapper {
-  width: 700px;
+  width: 450px;
   margin: 0 auto;
-
   background-color: aliceblue;
-  padding: 70px 100px;
+  padding: 102px 100px;
 }
 
 .btn-group {
@@ -28,11 +27,11 @@ p {
 input {
   width: 92px;
   height: 40px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
-  padding-left: 10px;
-  margin-top: 3px;
-  margin-right: 4px;
+  padding-left: 5px;
+  margin-top: 2px;
+  margin-right: 12px;
   outline: none;
 }
 div.input-wrapper {

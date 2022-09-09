@@ -1,0 +1,29 @@
+.wrapper {
+  background-color: var(--very-dark-cyan);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  min-height: 325px;
+  border-radius: 15px;
+}
+.tip-container {
+  color: var(--white);
+  margin-top: 1rem;
+}
+.total-container {
+  color: var(--strong-cyan);
+}
+.total {
+  padding-top: 2rem;
+}
+h6 {
+  font-size: 0.6em;
+  font-weight: bold;
+}
+#person {
+  margin-bottom: 32px;
+}
+h2 {
+  font-size: 1.4em;
+}

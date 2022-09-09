@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-}
-.page-logo {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
 }

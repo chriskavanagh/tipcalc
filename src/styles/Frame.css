@@ -1,0 +1,14 @@
+.frame-wrapper {
+  display: grid;
+  grid-template-columns: 450px 450px;
+  margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 16px solid aliceblue;
+  outline: 16px solid aliceblue;
+  border-radius: 5px;
+}
+
+.frame-wrapper {
+  border: 3px solid orange;
+}
