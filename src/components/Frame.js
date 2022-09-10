@@ -24,7 +24,8 @@ export default function Frame() {
 
   const total = useCallback(() => {
     let sub = +bill + +tipTotal;
-    let newSub = sub.toString();
+    let subFloat = sub.toFixed(2);
+    let newSub = subFloat.toString();
     setBillTotal(newSub);
   }, [bill, tipTotal]);
 
@@ -51,7 +52,7 @@ export default function Frame() {
         />
       </div>
       <div className="frame__bottom">
-        <Display tipTotal={tipTotal} />
+        <Display billTotal={billTotal} />
       </div>
     </main>
   );
