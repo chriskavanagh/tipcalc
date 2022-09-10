@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/TipButtons.css";
-//import { FaDollarSign } from "react-icons/fa";
+import { FaMale } from "react-icons/fa";
 import { currencyMask } from "../utils/currencyMask";
 
 export default function TipButtons({
@@ -42,17 +42,23 @@ export default function TipButtons({
           <div className="input-wrapper">
             <input
               type="text"
-              placeholder="0.00"
+              placeholder="Custom"
               className="custom"
               value={"$ " + tip}
               onChange={(e) => handler(currencyMask(e))}
             />
           </div>
         </div>
-        <div className="people">
+        <div className="people__wrapper">
+          <label htmlFor="people">Number Of People</label>
+          <div className="icon">
+            <FaMale style={{ fontSize: ".9em" }} />
+          </div>
           <input
             type="number"
-            className="people"
+            id="people"
+            name="people"
+            className="people__input"
             value={people}
             onChange={(e) => handlePeople(e)}
           />

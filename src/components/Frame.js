@@ -6,7 +6,7 @@ import "../styles/Frame.css";
 export default function Frame() {
   const [tip, setTip] = useState("");
   const [bill, setBill] = useState("");
-  const [people, setPeople] = useState(1);
+  const [people, setPeople] = useState(undefined);
   const [tipTotal, setTipTotal] = useState("");
   const [billTotal, setBillTotal] = useState("");
 

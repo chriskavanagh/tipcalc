@@ -10,7 +10,7 @@ export default function Display({ tipTotal, billTotal }) {
         <p className="tip-person">/person</p>
       </div>
       <div className="total-container">
-        <h2>${tipTotal.toFixed(2)}</h2>
+        <h2>${tipTotal}</h2>
         <h2 className="total">${billTotal}</h2>
       </div>
     </div>
