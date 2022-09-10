@@ -12,7 +12,7 @@ export default function TipButtons({ tip, handler, bill, billHandler }) {
         type="text"
         className="bill_amt"
         onChange={billHandler}
-        value={bill}
+        value={"$" + bill}
       />
       <div className="tip-wrapper">
         <p>Select Tip %</p>

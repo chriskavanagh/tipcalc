@@ -4,3 +4,6 @@
   grid-template-rows: 1fr;
   justify-items: center;
 }
+.page-logo {
+  margin: 5rem 0 3rem 0;
+}

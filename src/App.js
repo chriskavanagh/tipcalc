@@ -15,6 +15,7 @@ function App() {
   } */
   return (
     <div className="App">
+      <img src={logo} alt="logo" className="page-logo" />
       <main className="main-container">
         <Frame />
       </main>

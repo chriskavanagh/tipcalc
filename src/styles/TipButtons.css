@@ -41,3 +41,6 @@ div.input-wrapper {
   color: red;
   font-size: 15px;
 }
+.bill_amt {
+  width: 90%;
+}
