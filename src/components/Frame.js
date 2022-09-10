@@ -6,6 +6,7 @@ import "../styles/Frame.css";
 export default function Frame() {
   const [tip, setTip] = useState("");
   const [bill, setBill] = useState("");
+  const [people, setPeople] = useState(1);
   const [tipTotal, setTipTotal] = useState("");
   const [billTotal, setBillTotal] = useState("");
 
@@ -15,6 +16,10 @@ export default function Frame() {
 
   function billHandler(event) {
     setBill(event.target.value);
+  }
+
+  function handlePeople(event) {
+    setPeople(event.target.value);
   }
 
   const tipAmt = useCallback(() => {
@@ -37,9 +42,10 @@ export default function Frame() {
     total();
   }, [bill, tipAmt, total]);
 
-  console.log(`TipTotal: ${tipTotal}`);
+  /* console.log(`TipTotal: ${tipTotal}`);
   console.log(`Bill-Total: ${billTotal}`);
-  console.log(typeof billTotal);
+  console.log(typeof billTotal); */
+  console.log(people);
 
   return (
     <main className="frame-wrapper">
@@ -49,10 +55,12 @@ export default function Frame() {
           handler={handler}
           bill={bill}
           billHandler={billHandler}
+          people={people}
+          handlePeople={handlePeople}
         />
       </div>
       <div className="frame__bottom">
-        <Display billTotal={billTotal} />
+        <Display tipTotal={tipTotal} billTotal={billTotal} />
       </div>
     </main>
   );

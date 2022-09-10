@@ -1,10 +1,17 @@
-import React from "react";
+import { useState } from "react";
 import "../styles/TipButtons.css";
 //import { FaDollarSign } from "react-icons/fa";
 import { currencyMask } from "../utils/currencyMask";
 
-export default function TipButtons({ tip, handler, bill, billHandler }) {
-  console.log(bill);
+export default function TipButtons({
+  tip,
+  handler,
+  bill,
+  people,
+  billHandler,
+  handlePeople,
+}) {
+  //const [isActive, setIsActive] = useState(false);
 
   return (
     <>
@@ -12,7 +19,7 @@ export default function TipButtons({ tip, handler, bill, billHandler }) {
         <input
           type="text"
           className="bill_amt"
-          onChange={billHandler}
+          onChange={(e) => billHandler(currencyMask(e))}
           value={"$" + bill}
         />
         <p>Select Tip %</p>
@@ -44,10 +51,10 @@ export default function TipButtons({ tip, handler, bill, billHandler }) {
         </div>
         <div className="people">
           <input
-            type="text"
+            type="number"
             className="people"
-            onChange={billHandler}
-            value={bill}
+            value={people}
+            onChange={(e) => handlePeople(e)}
           />
         </div>
       </div>

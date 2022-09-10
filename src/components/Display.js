@@ -1,6 +1,6 @@
 import "../styles/Display.css";
 
-export default function Display({ billTotal }) {
+export default function Display({ tipTotal, billTotal }) {
   return (
     <div className="wrapper">
       <div className="tip-container">
@@ -10,7 +10,7 @@ export default function Display({ billTotal }) {
         <p className="tip-person">/person</p>
       </div>
       <div className="total-container">
-        <h2>$0.00</h2>
+        <h2>${tipTotal.toFixed(2)}</h2>
         <h2 className="total">${billTotal}</h2>
       </div>
     </div>
