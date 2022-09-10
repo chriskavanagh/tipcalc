@@ -1,8 +1,10 @@
 .tip-wrapper {
-  width: 450px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
   background-color: aliceblue;
-  padding: 102px 100px;
+  display: grid;
+  grid-template-rows: 40px 20px 100px 50px;
+  row-gap: 2rem;
 }
 
 .btn-group {
@@ -22,7 +24,6 @@ button {
 }
 p {
   font-size: 1rem;
-  margin-bottom: 1rem;
 }
 input {
   width: 92px;
@@ -34,6 +35,9 @@ input {
   margin-right: 12px;
   outline: none;
 }
+input.people {
+  width: 90%;
+}
 div.input-wrapper {
   position: relative;
 }
@@ -42,5 +46,6 @@ div.input-wrapper {
   font-size: 15px;
 }
 .bill_amt {
-  width: 90%;
+  width: 92%;
+  margin-bottom: 1rem;
 }

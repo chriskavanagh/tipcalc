@@ -8,13 +8,13 @@ export default function TipButtons({ tip, handler, bill, billHandler }) {
 
   return (
     <>
-      <input
-        type="text"
-        className="bill_amt"
-        onChange={billHandler}
-        value={"$" + bill}
-      />
       <div className="tip-wrapper">
+        <input
+          type="text"
+          className="bill_amt"
+          onChange={billHandler}
+          value={"$" + bill}
+        />
         <p>Select Tip %</p>
         <div className="btn-group">
           <button value={0.05} onClick={handler}>
@@ -41,6 +41,14 @@ export default function TipButtons({ tip, handler, bill, billHandler }) {
               onChange={(e) => handler(currencyMask(e))}
             />
           </div>
+        </div>
+        <div className="people">
+          <input
+            type="text"
+            className="people"
+            onChange={billHandler}
+            value={bill}
+          />
         </div>
       </div>
     </>
