@@ -1,12 +1,12 @@
+import { useState, useEffect, useCallback } from "react";
 import TipButtons from "./TipButtons";
 import Display from "./Display";
-import { useState, useEffect, useCallback } from "react";
 import "../styles/Frame.css";
 
 export default function Frame() {
   const [tip, setTip] = useState("");
   const [bill, setBill] = useState("");
-  const [people, setPeople] = useState(undefined);
+  const [people, setPeople] = useState("");
   const [tipTotal, setTipTotal] = useState("");
   const [billTotal, setBillTotal] = useState("");
 
@@ -24,14 +24,15 @@ export default function Frame() {
 
   const tipAmt = useCallback(() => {
     let sub = tip * bill;
-    setTipTotal(Math.round(sub * 100) / 100);
+    let newSub = Math.round(sub * 100) / 100;
+    setTipTotal(newSub.toFixed(2));
   }, [tip, bill]);
 
   const total = useCallback(() => {
     let sub = +bill + +tipTotal;
     let subFloat = sub.toFixed(2);
-    let newSub = subFloat.toString();
-    setBillTotal(newSub);
+    //let newSub = subFloat.toString();
+    setBillTotal(subFloat.toString());
   }, [bill, tipTotal]);
 
   useEffect(() => {
@@ -42,10 +43,10 @@ export default function Frame() {
     total();
   }, [bill, tipAmt, total]);
 
-  /* console.log(`TipTotal: ${tipTotal}`);
-  console.log(`Bill-Total: ${billTotal}`);
-  console.log(typeof billTotal); */
-  console.log(people);
+  console.log(`TipTotal: ${tipTotal}`);
+  //console.log(`Bill-Total: ${billTotal}`);
+  //console.log(typeof billTotal);
+  console.log(typeof people);
 
   return (
     <main className="frame-wrapper">

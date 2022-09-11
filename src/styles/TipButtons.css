@@ -25,9 +25,12 @@ button {
 
 p {
   font-size: 1rem;
-  place-self: center;
+  text-align: center;
+  margin-top: 28px;
 }
 input {
+  text-align: end;
+  padding-right: 10px;
   width: 92px;
   height: 40px;
   font-size: 17px;
@@ -36,6 +39,9 @@ input {
   margin-right: 12px;
   outline: none;
 }
+/* input.bill_amt {
+  position: relative;
+} */
 label {
   text-align: start;
   display: block;
@@ -51,16 +57,24 @@ input.people__input {
 .icon {
   position: absolute;
   top: 30px;
-  left: 5px;
+  left: 15px;
 }
 .people__wrapper {
   position: relative;
+}
+.bill__wrapper {
+  position: relative;
+}
+.icon__bill {
+  position: absolute;
+  top: 30px;
+  left: 20px;
 }
 div.input-wrapper {
   position: relative;
 }
 ::placeholder {
-  color: red;
+  color: rgb(44, 44, 44);
   font-size: 15px;
 }
 .bill_amt {

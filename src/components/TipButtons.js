@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/TipButtons.css";
-import { FaMale } from "react-icons/fa";
+import { FaUserEdit, FaCcVisa } from "react-icons/fa";
 import { currencyMask } from "../utils/currencyMask";
 
 export default function TipButtons({
@@ -12,16 +12,23 @@ export default function TipButtons({
   handlePeople,
 }) {
   //const [isActive, setIsActive] = useState(false);
+  console.log(typeof bill);
 
   return (
     <>
       <div className="tip-wrapper">
-        <input
-          type="text"
-          className="bill_amt"
-          onChange={(e) => billHandler(currencyMask(e))}
-          value={"$" + bill}
-        />
+        <div className="bill__wrapper">
+          <label htmlFor="people">Bill</label>
+          <div className="icon__bill">
+            <FaCcVisa style={{ fontSize: "1em" }} />
+          </div>
+          <input
+            type="text"
+            className="bill_amt"
+            onChange={(e) => billHandler(currencyMask(e))}
+            value={"$" + bill}
+          />
+        </div>
         <p>Select Tip %</p>
         <div className="btn-group">
           <button value={0.05} onClick={handler}>
@@ -52,7 +59,7 @@ export default function TipButtons({
         <div className="people__wrapper">
           <label htmlFor="people">Number Of People</label>
           <div className="icon">
-            <FaMale style={{ fontSize: ".9em" }} />
+            <FaUserEdit style={{ fontSize: ".9em" }} />
           </div>
           <input
             type="number"
