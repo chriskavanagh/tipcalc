@@ -18,11 +18,13 @@ export default function TipButtons({
     <>
       <div className="tip-wrapper">
         <div className="bill__wrapper">
-          <label htmlFor="people">Bill</label>
+          <label htmlFor="bill">Bill</label>
           <div className="icon__bill">
-            <FaCcVisa style={{ fontSize: "1em" }} />
+            <FaCcVisa style={{ fontSize: "1.4em", color: "#000080" }} />
           </div>
           <input
+            name="bill"
+            id="bill"
             type="text"
             className="bill_amt"
             onChange={(e) => billHandler(currencyMask(e))}
@@ -62,7 +64,7 @@ export default function TipButtons({
             <FaUserEdit style={{ fontSize: ".9em" }} />
           </div>
           <input
-            type="number"
+            type="text"
             id="people"
             name="people"
             className="people__input"

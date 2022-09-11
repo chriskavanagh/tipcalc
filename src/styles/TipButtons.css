@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: auto;
-  gap: 1px 1px;
+  gap: 4px 2px;
   justify-content: center;
 }
 button {
@@ -26,7 +26,7 @@ button {
 p {
   font-size: 1rem;
   text-align: center;
-  margin-top: 28px;
+  margin-top: 5px;
 }
 input {
   text-align: end;
@@ -39,6 +39,10 @@ input {
   margin-right: 12px;
   outline: none;
 }
+.custom {
+  text-align: start;
+  margin-top: 2px;
+}
 /* input.bill_amt {
   position: relative;
 } */
@@ -47,6 +51,9 @@ label {
   display: block;
   font-size: 0.9rem;
   margin-bottom: 5px;
+}
+label:first-child {
+  font-family: "Space Mono";
 }
 input.people__input {
   width: 95%;
@@ -67,14 +74,14 @@ input.people__input {
 }
 .icon__bill {
   position: absolute;
-  top: 30px;
+  top: 26px;
   left: 20px;
 }
 div.input-wrapper {
   position: relative;
 }
 ::placeholder {
-  color: rgb(44, 44, 44);
+  color: red;
   font-size: 15px;
 }
 .bill_amt {
