@@ -3,7 +3,7 @@
   height: 100%;
   background-color: aliceblue;
   display: grid;
-  grid-template-rows: 40px 20px 90px 50px;
+  grid-template-rows: 90px 25px 100px 40px 70px;
   row-gap: 2rem;
 }
 
@@ -14,6 +14,7 @@
   gap: 4px 2px;
   justify-content: center;
 }
+
 button {
   background-color: var(--very-dark-cyan);
   color: white;
@@ -37,7 +38,6 @@ input {
   font-weight: bold;
   padding-left: 5px;
   margin-right: 12px;
-  outline: none;
 }
 .custom {
   text-align: start;
@@ -58,16 +58,16 @@ label:first-child {
 input.people__input {
   width: 95%;
   height: 40px;
-  outline: none;
   text-align: end;
 }
 .icon {
   position: absolute;
   top: 30px;
-  left: 15px;
+  left: 19px;
 }
 .people__wrapper {
   position: relative;
+  grid-row-start: 5;
 }
 .bill__wrapper {
   position: relative;
@@ -75,7 +75,7 @@ input.people__input {
 .icon__bill {
   position: absolute;
   top: 26px;
-  left: 20px;
+  left: 25px;
 }
 div.input-wrapper {
   position: relative;
