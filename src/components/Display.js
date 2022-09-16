@@ -16,7 +16,7 @@ export default function Display({ tipTotal, billTotal, reset }) {
           <h2 className="total">${billTotal}</h2>
         </div>
         <div className="btn__wrapper">
-          <Button reset={reset} />
+          <Button reset={reset} className="btn__display" />
         </div>
       </div>
     </>
