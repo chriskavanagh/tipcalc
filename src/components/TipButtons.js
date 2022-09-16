@@ -5,14 +5,13 @@ import { currencyMask } from "../utils/currencyMask";
 
 export default function TipButtons({
   tip,
-  handler,
   bill,
   people,
+  disable,
+  handler,
   billHandler,
   handlePeople,
 }) {
-  //const [isActive, setIsActive] = useState(false)
-
   return (
     <>
       <div className="tip-wrapper">
@@ -32,19 +31,19 @@ export default function TipButtons({
         </div>
         <p>Select Tip %</p>
         <div className="btn-group">
-          <button value={0.05} onClick={handler}>
+          <button value={0.05} onClick={handler} disabled={disable}>
             5%
           </button>
-          <button value={0.1} onClick={handler}>
+          <button value={0.1} onClick={handler} disabled={disable}>
             10%
           </button>
-          <button value={0.15} onClick={handler}>
+          <button value={0.15} onClick={handler} disabled={disable}>
             15%
           </button>
-          <button value={0.25} onClick={handler}>
+          <button value={0.25} onClick={handler} disabled={disable}>
             25%
           </button>
-          <button value={0.5} onClick={handler}>
+          <button value={0.5} onClick={handler} disabled={disable}>
             50%
           </button>
           <div className="input-wrapper">
