@@ -35,5 +35,5 @@ h2 {
   width: 100%;
 }
 .btn__wrapper:hover {
-  transform: scale(1.1);
+  transform: skewX(25deg);
 }

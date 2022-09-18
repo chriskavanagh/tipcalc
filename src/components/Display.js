@@ -2,6 +2,7 @@ import "../styles/Display.css";
 import Button from "./Button";
 
 export default function Display({ tipTotal, billTotal, reset }) {
+  //console.table(props);
   return (
     <>
       <div className="wrapper">

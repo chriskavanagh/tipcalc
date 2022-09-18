@@ -56,7 +56,6 @@ export default function TipButtons({
             />
           </div>
         </div>
-
         <div className="people__wrapper">
           <label htmlFor="people">Number Of People</label>
           <div className="icon">

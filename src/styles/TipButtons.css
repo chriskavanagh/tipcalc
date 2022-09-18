@@ -3,7 +3,7 @@
   height: 100%;
   background-color: aliceblue;
   display: grid;
-  grid-template-rows: 90px 25px 100px 40px 70px;
+  grid-template-rows: 90px 25px 110px 40px 70px;
   row-gap: 2rem;
 }
 
@@ -20,10 +20,10 @@ button {
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 16px;
+  font-size: 17px;
   width: 90px;
+  height: 45px;
 }
-
 p {
   font-size: 1rem;
   text-align: center;
@@ -32,8 +32,8 @@ p {
 input {
   text-align: end;
   padding-right: 10px;
-  width: 92px;
-  height: 40px;
+  width: 95%;
+  height: 50px;
   font-size: 17px;
   font-weight: bold;
   padding-left: 5px;
@@ -41,7 +41,12 @@ input {
 }
 .custom {
   text-align: start;
-  margin-top: 2px;
+  justify-self: center;
+  color: whitesmoke;
+  font-size: 17px;
+  height: 45px;
+  width: 90px;
+  background-color: var(--very-dark-cyan);
 }
 /* input.bill_amt {
   position: relative;
@@ -60,11 +65,11 @@ input.people__input {
   height: 40px;
   text-align: end;
 }
-.icon {
+/* .icon {
   position: absolute;
   top: 30px;
   left: 19px;
-}
+} */
 .people__wrapper {
   position: relative;
   grid-row-start: 5;
@@ -72,11 +77,12 @@ input.people__input {
 .bill__wrapper {
   position: relative;
 }
-.icon__bill {
+/* .icon__bill {
   position: absolute;
-  top: 26px;
-  left: 25px;
-}
+  top: 28px;
+  left: 27px;
+} */
+
 div.input-wrapper {
   position: relative;
 }
@@ -90,20 +96,28 @@ div.input-wrapper {
   margin-right: 12px;
 }
 
-/* ---------------------------------------------------------------------*/
-.glitch {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 100px;
-  letter-spacing: 8px;
-  cursor: pointer;
+/* -----------------media queries for chrome and firefox-------------------*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .icon__bill {
+    position: absolute;
+    top: 32px;
+    left: 27px;
+  }
+  .icon {
+    position: absolute;
+    top: 33px;
+    left: 19px;
+  }
 }
-.glitch::before,
-.glitch::after {
-  content: "GLITCH";
-  display: block;
-  position: absolute;
-  top: 0%;
-  left: 0%;
+@-moz-document url-prefix() {
+  .icon__bill {
+    position: absolute;
+    top: 26px;
+    left: 27px;
+  }
+  .icon {
+    position: absolute;
+    top: 31px;
+    left: 19px;
+  }
 }
