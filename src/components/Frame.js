@@ -7,22 +7,22 @@ export default function Frame() {
   const [tip, setTip] = useState("");
   const [bill, setBill] = useState("");
   const [people, setPeople] = useState("1");
-  const [tipTotal, setTipTotal] = useState("");
-  const [billTotal, setBillTotal] = useState("");
+  const [tipTotal, setTipTotal] = useState("0");
+  const [billTotal, setBillTotal] = useState("0");
   const [disable, setDisable] = useState(false);
 
   function reset() {
     setTip("");
     setBill("");
     setPeople("");
-    setTipTotal("");
-    setBillTotal("");
+    setTipTotal("0.00");
+    setBillTotal("0.00");
     return;
   }
 
   function handler(event) {
     //event.currentTarget.disabled = true;
-    setDisable((prev) => !prev);
+    // setDisable((prev) => !prev);
     setTip(event.target.value);
     return;
   }
@@ -47,7 +47,7 @@ export default function Frame() {
     let sub = +bill + +tipTotal;
     let subFloat = sub.toFixed(2);
     //let newSub = subFloat.toString();
-    setBillTotal(subFloat.toString());
+    setBillTotal(subFloat);
   }, [bill, tipTotal]);
 
   useEffect(() => {

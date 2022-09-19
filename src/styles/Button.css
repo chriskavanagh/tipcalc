@@ -1,7 +1,19 @@
 .btn {
-  color: var(--very-dark-cyan);
+  /* color: var(--very-dark-cyan); */
+  color: white;
   font-weight: bold;
-  background-color: whitesmoke;
+  background-color: none;
   width: 50%;
   border-radius: 5px;
+  border: 2px #f0f8ff solid;
+  font-size: 19px;
+}
+
+.btn:focus {
+  outline: 2px solid #32de84;
+}
+
+.btn:hover {
+  background-color: whitesmoke;
+  color: green;
 }
