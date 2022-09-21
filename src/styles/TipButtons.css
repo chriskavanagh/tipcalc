@@ -47,6 +47,7 @@ input.bill_amt {
   height: 45px;
   width: 90px;
   background-color: var(--very-dark-cyan);
+  padding-inline: 10px 0px;
 }
 /* input.bill_amt {
   position: relative;
@@ -64,6 +65,8 @@ input.people__input {
   width: 95%;
   height: 45px;
   text-align: end;
+  padding-inline: 10px 10px;
+  font-size: 17px;
 }
 /* .icon {
   position: absolute;
@@ -101,12 +104,12 @@ div.input-wrapper {
   .icon__bill {
     position: absolute;
     top: 32px;
-    left: 27px;
+    left: 18px;
   }
   .icon {
     position: absolute;
     top: 33px;
-    left: 19px;
+    left: 23px;
   }
 }
 @-moz-document url-prefix() {
@@ -118,6 +121,6 @@ div.input-wrapper {
   .icon {
     position: absolute;
     top: 31px;
-    left: 19px;
+    left: 22px;
   }
 }
