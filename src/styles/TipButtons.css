@@ -41,13 +41,11 @@ input.bill_amt {
 }
 .custom {
   text-align: start;
-  justify-self: center;
+  /* justify-self: center; */
   color: whitesmoke;
   font-size: 17px;
-  height: 45px;
-  width: 90px;
   background-color: var(--very-dark-cyan);
-  padding-inline: 10px 0px;
+  padding-inline: 5px 0px;
 }
 /* input.bill_amt {
   position: relative;
@@ -88,6 +86,8 @@ input.people__input {
 
 div.input-wrapper {
   position: relative;
+  height: 45px;
+  width: 90px;
 }
 ::placeholder {
   color: red;

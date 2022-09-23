@@ -14,27 +14,23 @@ export default function Frame() {
   function reset() {
     setTip("");
     setBill("");
-    setPeople("");
+    setPeople("1");
     setTipTotal("0.00");
     setBillTotal("0.00");
-    return;
   }
 
   function handler(event) {
     //event.currentTarget.disabled = true;
     // setDisable((prev) => !prev);
     setTip(event.target.value);
-    return;
   }
 
   function billHandler(event) {
     setBill(event.target.value);
-    return;
   }
 
   function handlePeople(event) {
     setPeople(event.target.value);
-    return;
   }
 
   const tipAmt = useCallback(() => {
