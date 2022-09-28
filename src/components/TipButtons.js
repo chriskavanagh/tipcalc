@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import "../styles/TipButtons.css";
 import { FaUserEdit, FaCcVisa } from "react-icons/fa";
 import { currencyMask } from "../utils/currencyMask";
@@ -26,6 +26,7 @@ export default function TipButtons({
             type="text"
             className="bill_amt"
             onChange={(e) => billHandler(currencyMask(e))}
+            onBlur={(e) => (e.target.style.background = "pink")}
             value={"$" + bill}
           />
         </div>

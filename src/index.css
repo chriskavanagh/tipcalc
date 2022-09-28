@@ -36,3 +36,9 @@ body {
 :focus {
   outline: 4px solid #3fff00;
 }
+/* button:focus {
+  background-color: gray;
+} */
+button:active {
+  background-color: gray;
+}

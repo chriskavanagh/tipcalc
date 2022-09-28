@@ -45,7 +45,9 @@ input.bill_amt {
   color: whitesmoke;
   font-size: 17px;
   background-color: var(--very-dark-cyan);
-  padding-inline: 5px 0px;
+  padding-inline: 15px 0px;
+  height: 45px;
+  width: 90px;
 }
 /* input.bill_amt {
   position: relative;
@@ -65,7 +67,9 @@ input.people__input {
   text-align: end;
   padding-inline: 10px 10px;
   font-size: 17px;
+  font-weight: bold;
 }
+
 /* .icon {
   position: absolute;
   top: 30px;

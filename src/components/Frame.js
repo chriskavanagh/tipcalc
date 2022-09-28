@@ -22,6 +22,10 @@ export default function Frame() {
   function handler(event) {
     //event.currentTarget.disabled = true;
     // setDisable((prev) => !prev);
+    if (event.target.focus) {
+      event.target.style.backgroundColor = "red";
+    }
+
     setTip(event.target.value);
   }
 

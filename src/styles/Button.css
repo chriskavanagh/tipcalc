@@ -2,10 +2,10 @@
   /* color: var(--very-dark-cyan); */
   color: white;
   font-weight: bold;
-  background-color: none;
+  background-color: var(--strong-cyan);
   width: 50%;
   border-radius: 5px;
-  border: 2px #f0f8ff solid;
+  border: 1px black solid;
   font-size: 19px;
 }
 
@@ -16,4 +16,5 @@
 .btn:hover {
   background-color: whitesmoke;
   color: green;
+  border: 1px var(--grayish-cyan) solid;
 }
